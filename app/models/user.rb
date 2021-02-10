@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
    attachment :profile_image
+   validates :username, presence: true
 end
