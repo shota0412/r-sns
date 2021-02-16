@@ -1,5 +1,6 @@
 class TweetsController < ApplicationController
   def index
+    @tweet = Tweet.all
   end
 
   def new
@@ -14,6 +15,7 @@ class TweetsController < ApplicationController
   end
 
   def show
+    @tweet = Tweet.find(params[:id])
   end
 
   private
